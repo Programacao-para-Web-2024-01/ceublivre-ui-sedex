@@ -4,13 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
   <title>Carrinho de compras</title>
 </head>
 
@@ -21,23 +18,18 @@
       <h1 class="titulo">
         Carrinho de <span class="texto-azul">compras</span>
       </h1>
-
       <form class="formulario">
         <label class="campo-grupo">
           <span class="texto-medio-azul">Produto</span>
-          <select class="produto-input" name="produto" id="produto" onchange="atualizarQuantidadeEstoque()">
-            <option value="Fone de Ouvido - 100">Fone de Ouvido - R$100 (<span id="estoque-fone">100</span> disponíveis)</option>
-            <option value="Celular - 1400">Celular - R$1400 (<span id="estoque-celular">50</span> disponíveis)</option>
-            <option value="Oculus VR - 5000">Oculus VR - R$5000 (<span id="estoque-oculus">10</span> disponíveis)</option>
+          <select class="produto-input" name="produto" id="produto">
+           
           </select>
         </label>
-
         <section class="parte-inferior">
           <label class="campo-grupo">
             <span class="texto-medio-azul">Qtde.</span>
             <input class="quantidade-input" id="quantidade" type="number" min="1" placeholder="1">
           </label>
-
           <section class="botoes-wrapper">
             <button onclick="adicionar()" type="button" class="botao-form botao-adicionar">Adicionar</button>
             <button onclick="limpar()" type="button" class="botao-form botao-limpar">Limpar</button>
@@ -47,25 +39,21 @@
     </section>
     <section class="carrinho">
       <img src="./assets/carrinho-cinza.svg" alt="Imagem de um carrinho de compras cinza">
-
       <div class="titulo-wrapper">
         <img src="./assets/icone-carrinho.svg" alt="ícone de carrinho">
         <h2 class="carrinho__titulo">Produtos no carrinho</h2>
       </div>
-
       <section class="carrinho__produtos" id="lista-produtos">
+        
       </section>
-
       <div class="divisoria"></div>
-
       <p class="carrinho__total">
         Total: <span class="texto-azul" id="valor-total">R$0,00</span>
       </p>
       <button class="botao-form botao-adicionar">Finalizar Compra</button>
     </section>
   </main>
-
-  <script src="app.js"></script>
+  <script src="server.js"></script>
 </body>
 
 </html>
